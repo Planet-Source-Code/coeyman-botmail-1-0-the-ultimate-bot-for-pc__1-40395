@@ -1,0 +1,113 @@
+The ultimate bot for your PC!!!! (vote for me please -> what do you of this??? bug??? give me idea for new version)
+This program allow you to get files and email from a computer where this prog is installed
+I am at work and i've got email but not internet access , no floppy or cd drive ...
+I make this bot to execute some command on my computer at home (DSL connnected)
+So i can get from my work (or anywhere ex: friend , cybercafe -> yahoomail etc... ) some files from my hard drive or from internet
+i can consult my home email from an other computer that have email or internet access
+you can disable some command just by modifying .ini file
+
+How to use botmail???
+it's very simple execute botmail on your computer
+configure your server parameters...
+
+if you have a look in the .ini file you can see many sections
+1st : 
+[Botcom]
+Sendmecom=sendme
+vmailcom=vmail
+executecom=execcmd
+aspipage=aspipage
+botstop=stopme
+
+A Botcom is a command that you must put in the subject from email
+
+[vmailcmd]
+getemailliste=getlis
+getnewemail=getnew
+getallemail=getall
+getselemail=getsel
+
+this is the command that you must put in body text of email if you want to use vmail cmd
+
+[server]
+smtpserver=smtpuunet.coeyman.fr
+popserver=popuunet.coeyman.fr
+username=christophe
+domainname=coeyman.fr
+Password=AZERTY123
+
+this is the server's parameter
+
+[execcmd1]
+KeyName=Botmail
+AttachName=Botmail.exe
+PathName=C:\program~1\VBMail\VBMAIL.exe
+Subject=Botmail send
+texte=Vote for BOTMAIL
+
+[execcmd2]
+KeyName=planet
+AttachName=CDJUMBO.jpg
+PathName=http://www.planet-source-code.com/exhedra/PlanetSourceCode/images/CDLabel_Medium.jpg
+Subject=the pic of the month
+texte=this his a exemple of text
+
+
+To disable a command just replace it by white ex: Vmailcom= -> all command about email will be disable
+
+So for example (whith the default parameters) i install this appli at home and i am at work
+
+I Want to read my email
+Send a mail at home:
+Subject : Vmail
+Text: Getlis
+
+Botmail will send you the list of email (old and new) whith the email and subject from them
+
+if you want the only newmail from toto@caca.beu write this mail
+Subject : Vmail
+Text ; Getnew Getsel toto@caca.beu
+
+if you want all email
+subject : vmail
+Text: Getall
+
+if you want new email
+subject : vmail
+Text: Getnew
+
+if you want new email from joe@luck.com and lucky@luke.com
+Subject: vmail
+text : Getnew Getsel  joe@luck.com lucky@luke.com
+...
+...
+
+if you want to receive a botmail "shortcut"
+subject: execcmd
+Text : Botmail
+
+you can put many shortcut in text ex:
+subject : execcmd
+text : Botmail planet
+
+
+if you want to receive a file from internet or on your harddrive
+subject: sendme
+text: C:\boot.ini
+or 
+subject: sendme
+text: http://www.planet-source-code.com/exhedra/PlanetSourceCode/images/CDLabel_Medium.jpg
+
+
+if you want to look on the web (no log trace of internet access at work -> all by email)
+subject: aspipage
+text: http://www.cofidis.fr/credit/index.jsp
+
+botmail will return you a zipfile with html and all picture from the adress
+winzip or pkzip is needed for this function
+
+To stop botmail by mail :-)
+subject : stopme
+
+thank you for vote
+and tell me about botail (questions,bug , or your think...)
